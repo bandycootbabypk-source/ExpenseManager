@@ -1,0 +1,12 @@
+<Window x:Class="ExpenseManager.Views.ExpenseEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Редактирование расхода" Height="240" Width="420">
+    <StackPanel Margin="20">
+        <TextBlock Text="Описание"/>
+        <TextBox Text="{Binding Expense.Description, UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10"/>
+        <TextBlock Text="Сумма"/>
+        <TextBox Text="{Binding Expense.Amount, UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,10"/>
+        <Button Content="Закрыть" IsCancel="True" Width="100" HorizontalAlignment="Right"/>
+    </StackPanel>
+</Window>
